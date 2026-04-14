@@ -115,5 +115,6 @@ exports.onExecutePostLogin = async (event, api) => {
   api.idToken.setCustomClaim('role', 'authenticated')
 }
 ```
-I think the main cause of the issue may be that custom claims are now standardized or recommended to use namespaces and auth0 may remove non-namespaced claims. However there is no specific documentation on this, so its very hard to confirm, but there are forums on auth0 that states similar issues.
-ref: https://community.auth0.com/t/auth0-suddenly-not-allowing-not-namespaced-custom-claims-in-the-token/92363
+I think the main cause of the issue may be that custom claims are now standardized or recommended to use namespaces and auth0 may remove non-namespaced custom claims.
+official documentation from auth0: https://auth0.com/docs/troubleshoot/product-lifecycle/past-migrations/custom-claims-migration
+issues mentioned: https://community.auth0.com/t/auth0-suddenly-not-allowing-not-namespaced-custom-claims-in-the-token/92363
